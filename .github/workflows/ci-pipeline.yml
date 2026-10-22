@@ -4,7 +4,7 @@ name: CI Pipeline
 on: 
  workflow_call:
   inputs:
-    my-first-job:
+    my-first-job-input:
      required: false
      type: boolean
      default: false
@@ -23,7 +23,7 @@ env:
 jobs:
 
   my-first-job:
-   if: ${{ inputs.my-first-job }}
+   if: ${{ inputs.my-first-job-input }}
    name: My first job
    runs-on: ubuntu-latest
    steps:
